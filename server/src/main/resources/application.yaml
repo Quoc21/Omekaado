@@ -1,0 +1,31 @@
+server:
+    port: 8123
+
+spring:
+    servlet:
+        multipart:
+            max-file-size: 5MB
+
+    datasource:
+        url: jdbc:postgresql://localhost:5432/omekaado
+        username: omekaado_app
+        password: app!Q2w3e4r
+
+    jpa:
+        hibernate:
+            ddl-auto: validate
+    flyway:
+        enabled: true
+        fail-on-missing-locations: true
+        url: jdbc:postgresql://localhost:5432/omekaado
+        user: omekaado_migrator
+        password: mig!Q2w3e4r 
+        locations: classpath:db/migration
+        baseline-on-migrate: false   # apply on fresh db, no table created yet 
+        validate-on-migrate: true    # validate change of apllied migration file before run
+        clean-disabled: true         # disable delete db
+        out-of-order: false          # prevent run out of other migration file
+app:
+    upload:
+        dir: ./upload
+
