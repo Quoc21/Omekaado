@@ -1,0 +1,11 @@
+{
+    "java.compile.nullAnalysis.mode": "disabled",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.import.maven.enabled": true,
+    "java.maven.downloadSources": true,
+    "java.maven.downloadJavadoc": true,
+    "java.completion.enabled": true,
+    "java.completion.guessMethodArguments": true,
+    "spring-boot.ls.problem.application-properties.enabled": true,
+    "spring-boot.ls.validation.enabled": true
+}
